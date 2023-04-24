@@ -8,18 +8,20 @@
 <body>
     <header>
         <div class="container">
-            <h1>Bitcoin Price Predictor</h1>
+            <h1 class="logo">Bitcoin Price Predictor</h1>
+            <nav>
+                <button type="button" onclick="location.href='http://127.0.0.1:8000/'">Home</button>
+            </nav>
         </div>
     </header>
     <section id="showcase">
-            <div class="container">
-        <form action="{% url 'predict' %}" method="get">
-            <label for="date">Enter a date (YYYY-MM-DD):</label>
-            <input type="date" id="date" name="date" required>
-            <button type="submit">Predict</button>
-            <button type="button" onclick="location.href='http://127.0.0.1:8000/'">Go to home page</button>
-        </form>
-    </div>
-</section>
+        <div class="container">
+            <form action="{% url 'predict' %}" method="get">
+                <label for="date">Enter a date (YYYY-MM-DD):</label>
+                <input type="date" id="date" name="date" required>
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+    </section>
 </body>
 </html>
